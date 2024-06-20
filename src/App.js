@@ -62,6 +62,7 @@ Frogs are valued as food by humans and also have many cultural roles in literatu
 </p>
 
 <p style={{fontSize: '0.5em'}}>Adapted from <a href="https://en.wikipedia.org/wiki/Frog">Wikipedia: Frog</a> under Creative Commons license <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License">CC BY-SA 4.0</a></p>
+<p style={{fontSize: '0.5em'}}>A <a href="http://milquetoast.space">milquetoast game</a></p>
 </div>
   );
 }
