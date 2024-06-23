@@ -180,7 +180,7 @@ from the Ancient Greek ἀνούρα, literally 'without tail'). The oldest foss
 Madagascar, but molecular clock dating <suggest|suggests> their split from other amphibians may <extends|extend> further back to the Permian, 
   265 million years ago. Frogs are widely distributed<. R|, r>anging from the tropics to subarctic regions<|,> but the greatest concentration of 
 <species'|species> diversity is in tropical rainforest. <Frog's|Frogs> account for around 88% of extant amphibian species. They are also one of
-the five most diverse verterbrate|vertebrate orders. Warty frog species tend to be called toads<|,> but the distinction between frogs and toads is
+the five most diverse <verterbrate|vertebrate> orders. Warty frog species tend to be called toads<|,> but the distinction between frogs and toads is
 informal, not from taxonomy or <evolutionery|evolutionary> history.`
 }
 
@@ -225,6 +225,12 @@ function App () {
       setCurrentTip(n => (n === tips.length - 1 ? 0 : n + 1))
     }
   }, [score])
+
+  useEffect( () => {
+    if (finished) {
+      setShowHint(false)    
+    }
+  }, [finished])
 
   useEffect(() => {
     setAnswered({})
@@ -322,7 +328,7 @@ function App () {
         {!finished && hintAvailable ? (
           <div style={{ fontSize: '0.8em' }}>
             <a href='#' onClick={() => setShowHint(hint => !hint)}>
-              {showHint ? 'hide hint' : 'show hint'}
+              {showHint ? 'hide hints' : 'show hints'}
             </a>
             {showHint ? (
               <span>
@@ -360,8 +366,7 @@ function App () {
             style={{ width: '400px', height: '200px' }}
             id='customGameSource'
             ref={customGameSourceRef}
-            defaultValue={`This is a custom game<.|!!!>
-The top <12%|1%> of the world's people own <85%|46%> of the world<s|'s> wealth.
+            defaultValue={`This is a custom game<. |!!! >The top <12%|1%> of the world's people own <85%|46%> of the world<s|'s> wealth.
 <The|Das> <girl|Mädchen> <slept|schlief> <in the|im> <garden|Garten>.
 
 `}
